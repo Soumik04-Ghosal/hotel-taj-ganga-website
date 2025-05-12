@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact Hotel Taj Ganga - Reach Us for Reservations and Inquiries"/>
+  <meta name="keywords" content="Hotel, Contact, Phone, Email, Address"/>
+  <title>Contact Us - Hotel Taj Ganga</title>
+
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    #navbar {
+      background: #fff;
+      color: #222;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    #navbar .logo a {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #222;
+      text-decoration: none;
+      font-family: 'Pacifico', cursive;
+    }
+
+    #navbar ul {
+      list-style: none;
+      display: flex;
+    }
+
+    #navbar ul li {
+      margin: 0 15px;
+    }
+
+    #navbar ul li a {
+      color: #222;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding-bottom: 3px;
+    }
+
+    #navbar ul li a:hover,
+    .current {
+      color: #d4af37;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    /* Contact Info Section */
+    #contact-info {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #contact-info h1 {
+      font-size: 2.5em;
+      color: #222;
+      margin-bottom: 10px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    #contact-info p {
+      font-size: 1.15em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .box {
+      background: #fdfdfd;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .box i {
+      font-size: 2.5em;
+      color: #d4af37;
+      margin-right: 20px;
+    }
+
+    .box h3 {
+      margin: 0;
+      font-size: 1.4em;
+      color: #222;
+    }
+
+    .box p {
+      margin: 5px 0 0;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      #navbar ul li {
+        margin-bottom: 10px;
+      }
+
+      .box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .box i {
+        margin: 0 0 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="logo">
+      <a href="index.html">Hotel Taj Ganga</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a class="current" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact-info">
+    <div class="container">
+      <h1>Contact <span class="text-primary">Us</span></h1>
+      <p>We are here to assist you. Reach out to us anytime!</p>
+
+      <div class="box">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h3>Our Location</h3>
+          <p>Premises No 345/2 Of Lohar, Hotel Taj Ganga, Ward No 06, Indragora, DSB-722101</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3>Phone Number</h3>
+          <p>(+91) 94341 67463<br>(+91) 89185 30813</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email Address</h3>
+          <p>hoteltajgangabankura@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animations -->
+  <script>
+    gsap.from('#contact-info h1', { opacity: 0, y: -30, duration: 1 });
+    gsap.from('#contact-info p', { opacity: 0, delay: 0.5, y: 20, duration: 1 });
+
+    ScrollReveal().reveal('.box', {
+      delay: 200,
+      origin: 'bottom',
+      distance: '50px',
+      duration: 800,
+      easing: 'ease-in-out',
+      interval: 200
+    });
+  </script>
+
+</body>
+</html>

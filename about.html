@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Hotel Taj Ganga</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" crossorigin="anonymous" />
+
+  <!-- Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    #navbar {
+      background: #fff;
+      color: #222;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    #navbar ul {
+      list-style: none;
+      display: flex;
+    }
+
+    #navbar ul li {
+      margin: 0 15px;
+    }
+
+    #navbar ul li a {
+      color: #222;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding-bottom: 3px;
+    }
+
+    #navbar ul li a:hover,
+    .current {
+      color: #d4af37;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .info-left {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .info-left p {
+      font-size: 1.15em;
+      margin-bottom: 20px;
+    }
+
+    .info-left strong {
+      color: #000;
+    }
+
+    .info-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .info-right img {
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 50%;
+      margin-top: -60px; /* Adjusted to expose more of the image */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      filter: brightness(1.05) contrast(1.1);
+      transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.4s ease;
+    }
+
+    .info-right img:hover {
+      transform: scale(1.08) rotate(1deg);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      filter: brightness(1.1) contrast(1.2);
+    }
+
+    #testimonials {
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    #testimonials h2 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-bottom: 40px;
+      color: #222;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .testimonial {
+      background: #d4af37;
+      color: white;
+      margin: 20px auto;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 900px;
+      font-size: 1.1em;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .testimonial strong {
+      font-size: 1.2em;
+    }
+
+    .testimonial em {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-right img {
+        width: 300px;
+        height: 300px;
+        margin-top: 0;
+      }
+
+      .testimonial {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="current" href="about.html">About Us</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section id="about-info">
+    <div class="container">
+      <div class="info-left">
+        <p>
+          I am <strong>Dr. Rana Das</strong>, the proud owner of <strong>Hotel Taj Ganga</strong>. With a vision rooted in warmth, grace, and excellence, I built this hotel to offer guests an unmatched blend of royal luxury and comfort.
+        </p>
+        <p>
+          At Hotel Taj Ganga, every experience is crafted to perfection — from tastefully curated interiors and culinary delights to personalized guest care. We believe hospitality is an art that leaves a lasting impression.
+        </p>
+        <p>
+          Our commitment is simple: <strong>graceful service, timeless ambiance, and unforgettable memories</strong>. We invite you to be part of our story — one that celebrates tradition and sophistication.
+        </p>
+      </div>
+      <div class="info-right">
+        <img src="./img/photo-2.jpeg" alt="Dr. Rana Das - Owner of Hotel Taj Ganga" />
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Guest <span class="text-primary">Testimonials</span></h2>
+
+    <div class="testimonial">
+      <p><strong>"A luxurious retreat in the heart of the city!"</strong><br>
+         Hotel Taj Ganga exceeded all my expectations. The staff was incredibly courteous, the rooms were beautifully designed, and the food was outstanding.<br>
+         <em>— Rajiv Mehta, Business Traveler</em></p>
+    </div>
+
+    <div class="testimonial">
+      <p><strong>"A family-friendly paradise!"</strong><br>
+         Traveling with kids can be challenging, but the hospitality here made it seamless. The pool and service were amazing!<br>
+         <em>— Neha Kapoor, Family Vacationer</em></p>
+    </div>
+
+    <div class="testimonial">
+      <p><strong>"An exceptional stay with world-class service!"</strong><br>
+         From the moment we arrived, the experience was flawless. Warm staff, elegant setting, and unforgettable comfort.<br>
+         <em>— Jonathan Mitchell, International Guest</em></p>
+    </div>
+  </section>
+
+  <script>
+    // Animations
+    gsap.from('.info-left', { opacity: 0, x: -100, duration: 1, delay: 0.5 });
+    gsap.from('.info-right img', { opacity: 0, scale: 0.8, duration: 1, delay: 1 });
+
+    ScrollReveal().reveal('.testimonial', { delay: 200, distance: '50px', origin: 'bottom', opacity: 0 });
+    ScrollReveal().reveal('#testimonials h2', { delay: 500, distance: '30px', origin: 'top', opacity: 0 });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rooms - Hotel Taj Ganga</title>
+  <meta name="description" content="Explore room types at Hotel Taj Ganga">
+  <meta name="keywords" content="Hotel Rooms, Luxury, Taj Ganga">
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" crossorigin="anonymous" />
+
+  <!-- GSAP & ScrollReveal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    #navbar {
+      background: #fff;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    #navbar ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding-bottom: 4px;
+    }
+
+    #navbar ul li a:hover,
+    .current {
+      color: #d4af37;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    .header {
+      background: url("img/header-room.jpg") center center / cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+    }
+
+    .header .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2em;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .header p {
+      font-size: 1.15em;
+      color: #ddd;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+      padding: 60px 10%;
+    }
+
+    .room-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transform: translateY(40px);
+      opacity: 0;
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .room-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .room-info {
+      padding: 22px 18px;
+    }
+
+    .room-info h3 {
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .room-info p {
+      font-size: 1em;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .note {
+      text-align: center;
+      padding: 40px 20px 60px;
+      font-style: italic;
+      color: #444;
+      background: #fff;
+    }
+
+    .note strong {
+      color: #d4af37;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        height: 50vh;
+      }
+
+      .header h1 {
+        font-size: 2.2em;
+      }
+
+      .header p {
+        font-size: 1em;
+        padding: 0 15px;
+      }
+
+      .room-card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a class="current" href="rooms.html">Rooms</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="header">
+    <div class="overlay">
+      <h1>Our Rooms</h1>
+      <p>Discover your perfect stay — from solo escapes to group getaways, each room at Hotel Taj Ganga offers comfort, elegance, and value.</p>
+    </div>
+  </section>
+
+  <section class="room-grid">
+    <div class="room-card">
+      <img src="img/room-single-ac.jpg" alt="Single Bed AC Room">
+      <div class="room-info">
+        <h3>Single Bed - AC</h3>
+        <p>Perfect for solo travelers seeking comfort and cool ambiance.</p>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="img/room-single-nonac.jpg" alt="Single Bed Non AC Room">
+      <div class="room-info">
+        <h3>Single Bed - Non AC</h3>
+        <p>Affordable and cozy stay with essential amenities.</p>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="img/room-double-ac.jpg" alt="Double Bed AC Room">
+      <div class="room-info">
+        <h3>Double Bed - AC</h3>
+        <p>Spacious and luxurious for couples or business companions.</p>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="img/room-double-nonac.jpg" alt="Double Bed Non AC Room">
+      <div class="room-info">
+        <h3>Double Bed - Non AC</h3>
+        <p>Enjoy comfort and affordability together.</p>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="img/room-triple-ac.jpg" alt="Triple Bed AC Room">
+      <div class="room-info">
+        <h3>Triple Bed - AC</h3>
+        <p>Ideal for families or small groups needing space and comfort.</p>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="img/room-triple-nonac.jpg" alt="Triple Bed Non AC Room">
+      <div class="room-info">
+        <h3>Triple Bed - Non AC</h3>
+        <p>Best value for larger groups with essential facilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="note">
+    * Please note: <strong>Room rates may vary seasonally.</strong><br>
+    Contact our front desk for current pricing and availability.
+  </div>
+
+  <script>
+    // GSAP Animation
+    gsap.to(".room-card", {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+      stagger: 0.2
+    });
+
+    // ScrollReveal Animation
+    ScrollReveal().reveal('.room-card', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '40px',
+      interval: 200,
+      reset: false
+    });
+  </script>
+
+</body>
+</html>
